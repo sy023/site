@@ -59,14 +59,14 @@
     audioPlayer: document.createElement("audio"),
     text: [
       "<p>PAPOI OS</p>" +
-        "<p>Copyright (c) 2049, 2050. All Rights Reserved</p>" +
-        "<p>BIOS Version: 204902041 Release 5</p>" +
+        "<p>Copyright (c) 2003, 2004. All Rights Reserved</p>" +
+        "<p>BIOS Version: 2069420 Release 1</p>" +
         "<br />",
       "<p>Battery Pack: 98% OK</p>",
-      "<p>Memory Test: 16384K OK</p>",
+      "<p>Memory Test: 050104/020203 OK</p>",
       "<p>Initializing USB Controllers ... Done</p>",
       "<br />" +
-        "<p>KANYE 2049 imagines a universe where our heroes actually act like heroes. The views and opinions of Kanye West do not reflect the views and opinions of characters in this imagined universe.</p>",
+        "<p>Hello, Aquarius Hater</p>",
       "<br />" + "<br />",
       "<p>Press Any Key to boot system</p>",
     ],
@@ -220,7 +220,7 @@
         monthNames[date.getMonth()] +
         ". " +
         date.getDate() +
-        ", 2049</span>";
+        ", 2069</span>";
       return strTime;
     },
     displayTime: function () {
@@ -445,9 +445,8 @@
     e.preventDefault();
     $(".navbar .item.submenu.active").removeClass("active");
     var content =
-      '<div><p>Made by yours truly.</a><br />' +
-      'Lupet no,<br />' +
-      'Kinilig ka ba?</a>' +
+      '<div><p>Lupet no, kinilig ka ba?</a><br />' +
+      'Made by <a href="https://https://abos.carrd.co" target="_blank">yours</a> truly.</a>' +
       "</p></div>";
     $(".dialog").html(content).css("display", "flex");
   });
@@ -456,7 +455,7 @@
     e.preventDefault();
     $(".navbar .item.submenu.active").removeClass("active");
     var content =
-      "<div><p>Battery power courtesy of Tesla Petroleum. Tesla Petroleum is not liable for any burns, explosions, or airborne carcinogens caused by this battery pack. Battery pack is single use; Do not attempt to recycle.</p></div>";
+      "<div><p>Battery power is charged with coffee, cuddles, food, and lots of kisses. Please charge whenever possible or owner may die a horrible death.</br></br>Do not attempt to replace, you have been warned.</p></div>";
     $(".dialog").html(content).css("display", "flex");
   });
 
