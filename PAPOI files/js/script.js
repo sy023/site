@@ -102,7 +102,7 @@
 
       setTimeout(function () {
         self.boot();
-      }, 100);
+      }, 1000);
 
       for (const [action, handler] of self.actionHandlers) {
         try {
@@ -122,7 +122,7 @@
             $(".login").addClass("loaded");
             //$('.login input[type="password"]').focus();
             self.setLoading(false);
-          }, 1500);
+          }, 1000);
 
           if (ambientSound && !self.isIPhone) {
             self.ambientAudio.play();
@@ -231,6 +231,7 @@
         self.displayTime();
       }, 1000);
     },
+
     boot: function () {
       var self = this;
       // hide fullscreen toggle on fucking iOS
@@ -246,15 +247,17 @@
         self.bios.hide();
         $(".login").hide();
       } else {
+        self.bios.show();
         self.view.fadeIn(100, function () {
           $.each(self.text, function (i, e) {
             setTimeout(function () {
               self.bios.append(e);
-            }, i * 700);
+            }, i * 100);
           });
         });
       }
     },
+    
     toggleAmbientSound: function (status) {
       var self = this;
       if (status) {
@@ -446,7 +449,7 @@
     $(".navbar .item.submenu.active").removeClass("active");
     var content =
       '<div><p>Lupet no, kinilig ka ba?</a><br />' +
-      'Made by <a href="https://https://abos.carrd.co" target="_blank">yours</a> truly.</a>' +
+      'Made by <a href=https://i.pinimg.com/736x/5e/14/21/5e1421d9d965c6ad5410f1567af51602.jpg" target="_blank">yours</a> truly.</a>' +
       "</p></div>";
     $(".dialog").html(content).css("display", "flex");
   });
@@ -455,7 +458,7 @@
     e.preventDefault();
     $(".navbar .item.submenu.active").removeClass("active");
     var content =
-      "<div><p>Battery power is charged with coffee, cuddles, food, and lots of kisses. Please charge whenever possible or owner may die a horrible death.</br></br>Do not attempt to replace, you have been warned.</p></div>";
+      "<div><p>Battery power is charged with coffee, cuddles, food, and lots of kisses. Please charge whenever possible or I may die a horrible death.</br></br>Do not attempt to replace, you have been warned.</p></div>";
     $(".dialog").html(content).css("display", "flex");
   });
 
@@ -516,7 +519,7 @@
   $("#folder1").on("click", function (e) {
     e.preventDefault();
     $(".finder").removeClass("focus");
-    $(".finder.2k49").addClass("focus").show("slow");
+    $(".finder.MIXTAPE1").addClass("focus").show("slow");
     $(this).addClass("active");
   });
 

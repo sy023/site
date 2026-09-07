@@ -154,7 +154,7 @@ template {
   background-color: #000;
   margin: 0 auto;
   max-width: 100%;
-  padding-bottom: 56.25%;
+  padding-bottom: 0%;
   position: relative;
   height: 0;
   width: 100%;
@@ -4579,7 +4579,7 @@ a:hover {
   overflow: hidden;
 }
 .finder.fdl video {
-  width: 100%;
+   width: 150%;
 }
 .finder.readme {
   left: 30px;
@@ -4864,25 +4864,25 @@ a:hover {
 }
 .folder1 {
   position: absolute;
-  right: 20px;
+  right: 40px;
   top: 30px;
 }
 .folder2 {
   position: absolute;
-  right: 20px;
+  right: -10px;
   top: 100px;
 }
 .folder3 {
   position: absolute;
   right: 140px;
-  top: 130px;
+  top: 140px;
 }
 .folder4 {
   position: absolute;
   right: 20px;
   top: 180px;
 }
-.earthtxt {
+.readmee {
   position: absolute;
   right: 140px;
   top: 60px;
@@ -4890,7 +4890,7 @@ a:hover {
 .lizard {
   position: absolute;
   right: 140px;
-  top: 210px;
+  top: 230px;
 }
 .cursor {
   background: transparent url(img/loader.png) 0 0/14px 21px no-repeat;
