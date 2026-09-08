@@ -199,6 +199,21 @@
         console.log("video stalled");
         this.load();
       });
+
+      // Surface real load failures instead of failing silently
+      $(self.audioPlayer).on("error", function () {
+        console.error(
+          "Audio failed to load. Check the file exists at this exact path (case-sensitive):",
+          self.audioPlayer.src
+        );
+      });
+
+      $("#video").on("error", function () {
+        console.error(
+          "Video failed to load. Check the file exists at this exact path (case-sensitive):",
+          $("#video .mpeg").attr("src")
+        );
+      });
     },
 
     setBodyHeight: function () {
@@ -334,20 +349,18 @@
       var title = item.attr("data-title");
       var album = item.attr("data-album");
 
-      $("#video .mpeg").attr(
-        "src",
-        "video/" + video + ".mp4"
-      );
+      var mp4Src = encodeURI("video/" + video + ".mp4");
+      var trackSrc = encodeURI(track);
 
-      $("#video .webm").attr(
-        "src",
-        "video/" + video + ".webm"
-      );
+      $("#video .mpeg").attr("src", mp4Src);
 
       $("#video").get(0).load();
 
-      self.audioPlayer.src = track;
+      self.audioPlayer.src = trackSrc;
       self.audioPlayer.load();
+
+      console.log("Loading track:", trackSrc);
+      console.log("Loading video:", mp4Src);
 
       if ("mediaSession" in navigator) {
         try {
@@ -463,14 +476,18 @@
         var videoPromise = video.play();
 
         if (videoPromise !== undefined) {
-          videoPromise.catch(function () {});
+          videoPromise.catch(function (err) {
+            console.warn("Video play() was blocked or failed:", err);
+          });
         }
       }
 
       var audioPromise = self.audioPlayer.play();
 
       if (audioPromise !== undefined) {
-        audioPromise.catch(function () {});
+        audioPromise.catch(function (err) {
+          console.warn("Audio play() was blocked or failed:", err);
+        });
       }
     },
   };

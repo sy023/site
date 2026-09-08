@@ -4315,9 +4315,11 @@ a:hover {
 }
 .video-container {
   left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   position: absolute;
-  top: 0;
 }
 .video {
   display: none;
@@ -4888,7 +4890,7 @@ a:hover {
 .folder1 {
   position: absolute;
   right: 40px;
-  top: 30px;
+  top: 50px;
 }
 .folder2 {
   position: absolute;
@@ -4902,18 +4904,18 @@ a:hover {
 }
 .folder4 {
   position: absolute;
-  right: 20px;
-  top: 180px;
+  right: 10px;
+  top: 100px;
 }
 .folder5 {
   position: absolute;
-  right: -10px;
-  top: 220px;
+  right: 30px;
+  top: 180px;
 }
 .readmee {
   position: absolute;
   right: 140px;
-  top: 60px;
+  top: 100px;
 }
 .lizard {
   position: absolute;
