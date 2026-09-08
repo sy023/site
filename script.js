@@ -346,14 +346,14 @@
 
       $("#video").get(0).load();
 
-      self.audioPlayer.src = "sound/" + track;
+      self.audioPlayer.src = track;
       self.audioPlayer.load();
 
       if ("mediaSession" in navigator) {
         try {
           navigator.mediaSession.metadata = new MediaMetadata({
             title: title,
-            artist: "Toasty Digital",
+            artist: "Utotin",
             album: album,
             artwork: [
               {
@@ -394,29 +394,29 @@
       }
     },
 
-    playTrack: function (media) {
-      var self = this;
+   playTrack: function (media) {
+  var self = this;
 
-      if (media === "audio") {
-        self.loading.audio = true;
-      }
+  if (media === "audio") {
+    self.loading.audio = true;
+  }
 
-      if (media === "video") {
-        self.loading.video = true;
-      }
+  if (media === "video") {
+    self.loading.video = true;
+  }
 
-      if (self.loading.audio && self.loading.video) {
-        self.setLoading(false);
+  // Start as soon as the audio is ready.
+  if (self.loading.audio) {
+    self.setLoading(false);
+    self.resumeTrack();
 
-        self.resumeTrack();
+    $("body").addClass("media-playing");
 
-        $("body").addClass("media-playing");
-
-        if ("mediaSession" in navigator) {
-          navigator.mediaSession.playbackState = "playing";
-        }
-      }
-    },
+    if ("mediaSession" in navigator) {
+      navigator.mediaSession.playbackState = "playing";
+    }
+  }
+},
 
     stopTrack: function () {
       var self = this;
@@ -556,7 +556,7 @@
 
     var content =
       "<div><p>Lupet no, kinilig ka ba?<br />" +
-      'Made by <a href="https://abos.carrd.co" target="_blank">yours</a> truly.</p></div>';
+      'I love you :]</p></div>';
 
     $(".dialog").html(content).css("display", "flex");
   });
