@@ -549,6 +549,13 @@
     $(this).addClass("active");
   });
 
+  $("#folder5").on("click", function (e) {
+    e.preventDefault();
+    $(".finder").removeClass("focus");
+    $(".finder.JOURNAL").addClass("focus").show("slow");
+    $(this).addClass("active");
+  });
+
   $("#lizard").on("click", function (e) {
     e.preventDefault();
     $("#video2").get(0).play();

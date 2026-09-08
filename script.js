@@ -675,6 +675,15 @@
     $(".dialog").html(content).css("display", "flex");
   });
 
+  $("#folder5").on("click", function (e) {
+    e.preventDefault();
+
+    $(".finder").removeClass("focus");
+    $(".finder.journal").addClass("focus").show("slow");
+
+    $(this).addClass("active");
+  });
+
   // LIZARD
   $("#lizard").on("click", function (e) {
     e.preventDefault();
@@ -706,6 +715,18 @@
     e.stopPropagation();
 
     $(".finder.earth").addClass("focus").show("slow");
+  });
+
+  // JOURNAL ENTRIES (works for any current or future entry button
+  // that has a data-target matching a ".finder.journal-entry.<target>" window)
+  $(".journal-entry-btn").on("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    var target = $(this).data("target");
+
+    $(".finder").removeClass("focus");
+    $(".finder." + target).addClass("focus").show("slow");
   });
 
   // CLOSE FINDERS

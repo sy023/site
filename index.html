@@ -32,6 +32,7 @@
 
     <div class="screen">
      
+      <!--
       <div class="bios"></div>
       <div class="login" style="display: none;">
         <div class="login-dialog">
@@ -58,7 +59,7 @@
           </div>
         </div>
       </div>
-      
+      -->
 
       <div class="navbar">
         <div class="left">
@@ -124,6 +125,8 @@
         </div>
       </div>
 
+      <!-- DESKTOP FOLDERS -->
+
       <button class="file folder folder1 ga-ce" data-category="elements" data-action="click" data-label="MIXTAPE1" id="folder1">
         <span>MIXTAPE</span>
       </button>
@@ -136,8 +139,8 @@
         <span>BLONDA</span>
       </button>
 
-      <button class="file text folder4 ga-ce" data-category="elements" data-action="click" data-label="yandhi" id="folder4">
-        <span>journal.txt</span>
+      <button class="file folder folder4 ga-ce" data-category="elements" data-action="click" data-label="yandhi" id="folder4">
+        <span>yandhi.zip</span>
       </button>
 
       <button class="file image lizard hidden ga-ce" data-category="elements" data-action="click" data-label="lizard" id="lizard">
@@ -147,6 +150,10 @@
       <button class="file text readmee ga-ce" data-category="elements" data-action="click" data-label="earth" id="earththt">
         <span><em>readme</em><wbr>.txt</span>
       </button>
+
+      <button class="file folder folder5 ga-ce" data-category="elements" data-action="click" data-label="JOURNAL"  id="folder5">
+         <span>JOURNAL</span>
+</button>
       
 
 
@@ -211,6 +218,36 @@
             <button class="file sound play-track ga-ce" data-category="tracks" data-action="click" data-label="TouchTheSky" data-sound="2049/17_TOUCH_THE_SKY.mp3" data-title="Touch The Sky" data-album="KANYE2049" data-video="17_TOUCH_THE_SKY">
               <span><em>TOUCH THE SKY</em><wbr>.mp3</span>
             </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="finder journal" style="display: none;">
+        <header class="header">
+          <span class="title">JOURNAL</span>
+          <button class="close">x</button>
+        </header>
+        <div class="body">
+          <div class="d-flex flex-wrap">
+
+            <button class="file text journal-entry-btn ga-ce" data-category="elements" data-action="click" data-label="journal1" data-target="journal1" id="journal1">
+              <span><em>entry1</em><wbr>.txt</span>
+            </button>
+
+            <button class="file text journal-entry-btn ga-ce" data-category="elements" data-action="click" data-label="journal2" data-target="journal2" id="journal2">
+              <span><em>entry2</em><wbr>.txt</span>
+            </button>
+
+            <button class="file text journal-entry-btn ga-ce" data-category="elements" data-action="click" data-label="journal3" data-target="journal3" id="journal3">
+              <span><em>entry3</em><wbr>.txt</span>
+            </button>
+
+            <!-- TO ADD A NEW ENTRY:
+                 1. copy one of the buttons above, give it a new number
+                    (id + data-target, e.g. "journal4")
+                 2. copy one of the ".finder.journal-entry.journalN" windows
+                    below and match that same number -->
+
           </div>
         </div>
       </div>
@@ -310,11 +347,47 @@
         </header>
         <div class="body">
           <div>
-            <p>It's 2049. Kanye West has been missing for nearly 30 years.</p>
-            <p>Rising global temperatures threaten to end human civilization as we know it.</p>
-            <p>Meanwhile, the president has just made contact with an alternate universe—a utopian version of earth that prevented its own global warming long ago.</p>
-            <p>Through time and space, the alternate universe has sent a mysterious gift: a leaked Kanye West album unlike any album we've heard before.</p>
-            <p>The president believes it may hold the secret to saving our planet.</p>
+            <p>you know how much i love music, so here are a few songs i would love to listen to with you. </p>
+            <p>i hope you'll like them as well. so maybe someday, we'll have a few more songs that will always make us think of each other.</p><br><br>
+            <p><u><a href="https://open.spotify.com/playlist/4lnKczCjMau2Wh2ZCdOhug?si=033c047ef83e4390">MIXTAPE 1</a></u> mostly consists of slow, acoustic oldies. i noticed that as much as you love your rap music, you have a soft spot for the sweeter songs as well.</p>
+            <p>maybe it's the softer melodies, or the warmer sound. perhaps you like it a little more romantic than you'd ever admit.</p>
+            <!--<p><a href="https://open.spotify.com/playlist/4lnKczCjMau2Wh2ZCdOhug?si=033c047ef83e4390">SPOTIFY</a></p>-->
+          </div>
+        </div>
+      </div>
+
+      <div class="finder journal-entry journal1" style="display: none;">
+        <header class="header">
+          <span class="title">entry1.txt</span>
+          <button class="close">x</button>
+        </header>
+        <div class="body">
+          <div>
+            <p>[write your first journal entry here]</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="finder journal-entry journal2" style="display: none;">
+        <header class="header">
+          <span class="title">entry2.txt</span>
+          <button class="close">x</button>
+        </header>
+        <div class="body">
+          <div>
+            <p>[write your second journal entry here]</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="finder journal-entry journal3" style="display: none;">
+        <header class="header">
+          <span class="title">entry3.txt</span>
+          <button class="close">x</button>
+        </header>
+        <div class="body">
+          <div>
+            <p>[write your third journal entry here]</p>
           </div>
         </div>
       </div>
