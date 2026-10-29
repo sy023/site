@@ -75,7 +75,7 @@
     text: [
       "<p>PAPOI OS</p>" +
         "<p>Copyright (c) 2003, 2004. All Rights Reserved</p>" +
-        "<p>BIOS Version: 2069420 Release 1</p>" +
+        "<p>BIOS Version: 2069420 Release 1.5!!</p>" +
         "<br />",
 
       "<p>Battery Pack: 98% OK</p>",
@@ -85,7 +85,8 @@
       "<p>Initializing USB Controllers ... Done</p>",
 
       "<br />" +
-        "<p>Hello, Aquarius Hater</p>",
+        "<p>Welcome, My Lovie...</p>",
+         "<p>I love you.</p>",
 
       "<br /><br />",
 
@@ -507,8 +508,8 @@
     e.preventDefault();
 
     var answers = [
-      "aSBsb3ZlIHlvdQ==",
-      "aWx5",
+       "aWx5",
+      "MTMyNjc=", //13267
     ];
 
     var input = $(this).find("input[type='password']");
@@ -717,6 +718,19 @@
 
     $(".finder.fdl").addClass("focus").show();
   });
+
+  // EXTRA VIDEO
+$("#videoextra").on("click", function (e) {
+  e.preventDefault();
+
+  $(".finder.extra-video").addClass("focus").show();
+
+  var video = $("#videoextra-player").get(0);
+
+  if (video) {
+    video.play().catch(function () {});
+  }
+});
 
   // README
   $("#readme").on("click", function (e) {

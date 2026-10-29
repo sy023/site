@@ -4337,7 +4337,7 @@ a:hover {
   }
 }
 .screen {
-  background: #fff url(img/bg.png) 0 0 repeat;
+  background: #fff url(img/taiwan.jpg) 0 0 no-repeat;
   border: 1px solid #000;
   border-radius: .625rem;
   margin: 0;
@@ -4365,7 +4365,7 @@ a:hover {
   left: 0;
   bottom: 0;
   right: 0;
-  background: rgba(18,16,16,.08);
+  background: rgba(18,16,16,.06);
   opacity: 0;
   z-index: 10;
   pointer-events: none;
@@ -4380,6 +4380,7 @@ a:hover {
   right: 0;
   background: linear-gradient(rgba(18,16,16,0) 50%,rgba(0,0,0,.25) 50%),linear-gradient(90deg,rgba(255,0,0,.06),rgba(0,255,0,.02),rgba(0,0,255,.06));
   z-index: 10;
+  opacity: 0.4;
   background-size: 100% 2px,3px 100%;
   pointer-events: none;
 }
@@ -4921,6 +4922,27 @@ a:hover {
   position: absolute;
   right: 140px;
   top: 230px;
+}
+.videoextra {
+  position: absolute;
+  right: 60px;
+  top: 325px;
+}
+
+.finder.extra-video {
+  left: 130px;
+  top: 110px;
+  width: 320px;
+  height: 200px;
+  z-index: 3;
+}
+
+.finder.extra-video .body {
+  overflow: hidden;
+}
+
+.finder.extra-video video {
+  width: 100%;
 }
 .cursor {
   background: transparent url(img/loader.png) 0 0/14px 21px no-repeat;
