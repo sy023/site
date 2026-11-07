@@ -58,6 +58,38 @@
 
   sharePopups.init();
 
+// SLIDSHOW BACKGROUNd
+
+$(function () {
+  const wallpapers = [
+    "PAPOI files/img/bgPB.jpg",
+    "PAPOI files/img/bgPB2.jpg",
+    "PAPOI files/img/taiwan3.jpg",
+    "PAPOI files/img/taiwan2.jpg",
+    "PAPOI files/img/taiwan.jpg"
+  ];
+
+  let index = 0;
+
+  // preload 
+  wallpapers.forEach(function (src) {
+    const img = new Image();
+    img.src = src;
+  });
+
+
+  setInterval(function () {
+    index = (index + 1) % wallpapers.length;
+
+    $(".screen").css(
+      "background-image",
+      'url("' + wallpapers[index] + '")'
+    );
+
+    console.log("Wallpaper changed:", wallpapers[index]);
+  }, 5000);
+});
+
   // SYSTEM
   var system = {
     view: $(".screen"),
@@ -75,7 +107,7 @@
     text: [
       "<p>PAPOI OS</p>" +
         "<p>Copyright (c) 2003, 2004. All Rights Reserved</p>" +
-        "<p>BIOS Version: 2069420 Release 1.5!!</p>" +
+        "<p>BIOS Version: 2069420 Release 2</p>" +
         "<br />",
 
       "<p>Battery Pack: 98% OK</p>",
@@ -86,6 +118,10 @@
 
       "<br />" +
         "<p>Welcome, My Lovie...</p>",
+        "<p>Happy Monthsary!</p>",
+        
+      "<br />",
+
          "<p>I love you.</p>",
 
       "<br /><br />",
