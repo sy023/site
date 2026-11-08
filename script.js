@@ -542,13 +542,12 @@ $(function () {
     $(this).parent(".hint").find("span").show();
   });
 
- /*
+
   // PASSWORD LOGIN
   $(".login form").on("submit", function (e) {
     e.preventDefault();
 
     var answers = [
-       "aWx5",
       "MTMyNjc=", //13267
     ];
 
@@ -572,9 +571,9 @@ $(function () {
       // Small visual feedback
       input.trigger("focus");
     }
-  }); */
+  }); 
 
-
+ /*
   // TEMPORARILY DISABLE PASSWORD
 $(".login form").on("submit", function (e) {
   e.preventDefault();
@@ -586,7 +585,7 @@ $(".login form").on("submit", function (e) {
     system.toggleAmbientSound(false);
     system.setLoading(false);
   }, 1800);
-});
+}); */
 
   // NAVIGATION
   $(".navbar .item.submenu button").on("click", function (e) {
