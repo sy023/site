@@ -64,9 +64,11 @@ $(function () {
   const wallpapers = [
     "PAPOI files/img/bgPB.jpg",
     "PAPOI files/img/bgPB2.jpg",
-    "PAPOI files/img/taiwan3.jpg",
-    "PAPOI files/img/taiwan2.jpg",
-    "PAPOI files/img/taiwan.jpg"
+    "PAPOI files/img/bgPB3.jpg",
+    "PAPOI files/img/bgPB5.jpg",    
+    "PAPOI files/img/bgPB4.jpg",
+    "PAPOI files/img/bgPB6.jpg",
+    "PAPOI files/img/bgPB8.jpg"
   ];
 
   let index = 0;
@@ -207,6 +209,7 @@ $(function () {
           system.started = true;
         }
       });
+      
 
       self.ambientAudio.loop = true;
       self.ambientAudio.volume = 0;
@@ -539,6 +542,7 @@ $(function () {
     $(this).parent(".hint").find("span").show();
   });
 
+ /*
   // PASSWORD LOGIN
   $(".login form").on("submit", function (e) {
     e.preventDefault();
@@ -568,7 +572,21 @@ $(function () {
       // Small visual feedback
       input.trigger("focus");
     }
-  });
+  }); */
+
+
+  // TEMPORARILY DISABLE PASSWORD
+$(".login form").on("submit", function (e) {
+  e.preventDefault();
+
+  $(".login").removeClass("loaded");
+
+  setTimeout(function () {
+    $(".login").hide();
+    system.toggleAmbientSound(false);
+    system.setLoading(false);
+  }, 1800);
+});
 
   // NAVIGATION
   $(".navbar .item.submenu button").on("click", function (e) {
@@ -738,6 +756,15 @@ $(function () {
     $(this).addClass("active");
   });
 
+  $("#folder6").on("click", function (e) {
+    e.preventDefault();
+
+    $(".finder").removeClass("focus");
+    $(".finder.mixtape2").addClass("focus").show("slow");
+
+    $(this).addClass("active");
+  });
+
   // LIZARD
   $("#lizard").on("click", function (e) {
     e.preventDefault();
@@ -774,6 +801,13 @@ $("#videoextra").on("click", function (e) {
     e.stopPropagation();
 
     $(".finder.readme").addClass("focus").show("slow");
+  });
+
+  $("#readme2").on("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    $(".finder.readme2").addClass("focus").show("slow");
   });
 
   // EARTH
